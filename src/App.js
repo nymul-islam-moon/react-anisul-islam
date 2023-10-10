@@ -10,7 +10,7 @@ function App(){
 
     return <div>
         <h1 className={ 'headingStyle' }>TO DO APP</h1>
-        { Data.map( ( item ) => <Card titleText={ item.title } descText={ item.desc }/> ) }
+        { Data.map( ( item, index ) => <Card key={index} titleText={ item.title } descText={ item.desc }/> ) }
     </div>;
 }
 
