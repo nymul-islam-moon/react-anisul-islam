@@ -2,4 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<h1>Welcome to React App</h1>);
+root.render(
+    <h1>TO DO APP</h1>
+);
