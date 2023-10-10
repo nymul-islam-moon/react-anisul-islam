@@ -11,8 +11,8 @@ const headingStyle = {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div>
-        <h1 style={headingStyle}>To DO APP</h1>
-        <h3>{todoTitle}</h3>
+        <h1 className={'headingStyle'}>To DO APP</h1>
+        <h3 style={headingStyle}>{todoTitle}</h3>
         <p>{todoDecsription}</p>
         <p>{new Date().getFullYear()}</p>
     </div>

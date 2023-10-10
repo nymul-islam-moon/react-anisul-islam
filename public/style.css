@@ -1,0 +1,9 @@
+body{
+    background: black;
+}
+.headingStyle{
+    background-color: powderblue;
+    color: green;
+    text-align: center;
+    padding: 15px;
+}
