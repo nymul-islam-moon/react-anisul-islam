@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./components/Card";
 import Data from "./data.json"
+import List from "./components/UniqueList/List";
 
 function App(){
 
@@ -9,8 +10,7 @@ function App(){
     // <Card titleText={ Data[i].title } descText={ Data[i].desc }/>
 
     return <div>
-        <h1 className={ 'headingStyle' }>TO DO APP</h1>
-        { Data.map( ( item, index ) => <Card key={index} titleText={ item.title } descText={ item.desc }/> ) }
+        <List />
     </div>;
 }
 
