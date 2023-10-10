@@ -12,8 +12,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div>
         <h1 className={'headingStyle'}>To DO APP</h1>
-        <h3 style={headingStyle}>{todoTitle}</h3>
-        <p>{todoDecsription}</p>
-        <p>{new Date().getFullYear()}</p>
+        <div className={'card'}>
+            <h3 className={'cardtitle'}>{todoTitle}</h3>
+            <p className={'cardDesc'}>{todoDecsription}</p>
+            <p className={'cardFooter'}>{new Date().getFullYear()}</p>
+        </div>
+
     </div>
 );
