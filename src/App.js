@@ -8,11 +8,9 @@ function App(){
 
     // <Card titleText={ Data[i].title } descText={ Data[i].desc }/>
 
-    items = Data.map( ( item ) => <Card titleText={ item.title } descText={ item.desc }/> )
-
     return <div>
         <h1 className={ 'headingStyle' }>TO DO APP</h1>
-        { items }
+        { Data.map( ( item ) => <Card titleText={ item.title } descText={ item.desc }/> ) }
     </div>;
 }
 
