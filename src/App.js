@@ -6,9 +6,9 @@ function App(){
 
     let items = [];
 
-    for ( let  i = 0; i < Data.length; i++ ) {
-        items.push( <Card titleText={ Data[i].title } descText={ Data[i].desc }/> )
-    }
+    // <Card titleText={ Data[i].title } descText={ Data[i].desc }/>
+
+    items = Data.map( ( item ) => <Card titleText={ item.title } descText={ item.desc }/> )
 
     return <div>
         <h1 className={ 'headingStyle' }>TO DO APP</h1>
