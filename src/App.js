@@ -15,14 +15,10 @@ const users = [
     },
     {
         fullName    : "Towkir Islam",
-        age         : 27,
+        age         : 29,
         phones      : [
-            {
-                home        : "01786287789"
-            },
-            {
-                office      : "01786287789"
-            }
+            { home        : "01786287789" },
+            { office      : "01777893854" }
         ]
     }
 ]
@@ -32,16 +28,18 @@ export default function App() {
         <div>
             <h1>Nested Lists</h1>
             {
-                users.map( (user, index) => <artical key={index}>
-                    <h3>{user.fullName}</h3>
-                    <p>{user.age}</p>
+                users.map( (user, index) => (
+                    <article key={index}>
+                    <h3>User Name : { user.fullName }</h3>
+                    <p>Age : { user.age }</p>
                     {
-                        user.phones.map( (phone, index) => <div>
-                            <p>Home     : { phone.home }</p>
-                            <p>Office   : { phone.office } </p>
-                        </div> )
+                        user.phones.map( ( phone, index ) => (
+                            <div key={index}>
+                            <p>{ phone.home }</p>
+                            <p>{ phone.office }</p>
+                        </div>) )
                     }
-                </artical>  )
+                </article>)  )
             }
         </div>
     );
