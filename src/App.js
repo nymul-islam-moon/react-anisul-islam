@@ -6,7 +6,7 @@ function App() {
     return (
         <div>
             <Card1 name="card1" desc="This is card 1" />
-            <Card2 />
+            <Card2 name="Card 2" desc="This is the card 2"/>
         </div>
     )
 }
