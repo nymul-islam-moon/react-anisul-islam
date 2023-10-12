@@ -1,13 +1,10 @@
-import React from 'react';
-import { FaAppStore, FaStudiovinari } from "react-icons/fa6";
+import React from "react";
+import ReactBootstrap from "./components/React_Bootstrap/ReactBootstrap.js";
 
-function App() {
+export default function App() {
     return (
         <div>
-            <span>Welcome TO React <FaAppStore className="icon" /> </span>
-            <span> <FaStudiovinari className="icon" /> </span>
+            <ReactBootstrap />
         </div>
-    )
+    );
 }
-
-export default App;
