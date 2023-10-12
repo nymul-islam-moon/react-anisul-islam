@@ -9,7 +9,7 @@ class CONDITIONAL_RENDERING extends Component {
 
 
         this.state = {
-            isLoggedIn : true
+            isLoggedIn : false
         }
     }
 
@@ -17,15 +17,12 @@ class CONDITIONAL_RENDERING extends Component {
 
         const { isLoggedIn } = this.state;
 
-        let element;
-        element = isLoggedIn ? <Home /> : <Login />
-
         return (
             /**
-             * Warning : we can't use directly if-else in the return
+             * Message : We Can directly use ternary operator in the return
              */
             <div>
-                { element }
+                { isLoggedIn ? <Home /> : <Login /> }
             </div>
         )
     }
