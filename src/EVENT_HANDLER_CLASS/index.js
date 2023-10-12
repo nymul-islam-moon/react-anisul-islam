@@ -19,7 +19,7 @@ export default class EVENT_HANDLER_CLASS extends Component {
         this.setState( {
             changedValue : e.target.value
         }, () => {
-            console.log( this.state.changedValue )  // It will show currect changed value on the console
+            console.log( this.state.changedValue )  // It will show currect changed value on the console 
         } )
         // console.log( this.state.changeddValue ) // if we console this we will see the value but one charecter behind cause this is not active on change function
     }
