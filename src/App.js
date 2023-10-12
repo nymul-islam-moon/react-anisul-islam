@@ -1,9 +1,10 @@
 import React from 'react'
+import STATE from './STATE';
 
 export default function App() {
     return (
         <div>
-            Hello World
+            <STATE count="0" />
         </div>
     );
 }
