@@ -18,7 +18,7 @@ export default class EVENT_BINDING extends Component {
      * handleClick method implemented
      * @returns {JSX.Element}
      */
-    handleClick = () => {
+    handleClick () {
         this.setState({
             count: this.state.count + 1
         })
@@ -28,7 +28,7 @@ export default class EVENT_BINDING extends Component {
         return (
             <div>
                 <h1> {this.state.count} </h1>
-                <button onClick={this.handleClick}>Increase</button>
+                <button onClick={this.handleClick.bind(this)}>Increase</button>
             </div>
         )
     }
