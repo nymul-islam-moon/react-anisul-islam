@@ -7,6 +7,8 @@
 -   npm install
 -   npm start
 
+<h1 align="center" style="color:cyan;">I am Nymul Islam </h1>
+
 ## Template Includes
 
 -   react-icons
