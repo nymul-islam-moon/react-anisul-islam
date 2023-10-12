@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class HOOKS_USESTATE extends Component {
+export default class HOOKS_USESTATE1 extends Component {
 
     constructor( props ) {
         super( props );
