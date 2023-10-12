@@ -19,10 +19,10 @@ class CONDITIONAL_RENDERING extends Component {
 
         return (
             /**
-             * Message : We Can directly use ternary operator in the return
+             * Message : && uses for if fthe first condition is true, then it will check second condition if not it will break there!! It is called Short Circuit
              */
             <div>
-                { isLoggedIn ? <Home /> : <Login /> }
+                { isLoggedIn && <Home /> }
             </div>
         )
     }
