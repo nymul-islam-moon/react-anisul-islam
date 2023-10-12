@@ -15,17 +15,24 @@ class CONDITIONAL_RENDERING extends Component {
 
     render() {
 
-        if ( this.state.isLoggedIn ) {
-            return <Home />
+        const { isLoggedIn } = this.state;
+
+        let element;
+
+        if ( isLoggedIn ) {
+            element =  <Home />
         } else {
-            return <Login />
+            element = <Login />
         }
 
-        // return (
-        //     <div>
-        //
-        //     </div>
-        // )
+        return (
+            /**
+             * Warning : we can't use directly if-else in the return
+             */
+            <div>
+                { element }
+            </div>
+        )
     }
 }
 
