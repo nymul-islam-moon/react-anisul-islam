@@ -14,9 +14,16 @@ export default function App() {
 
 
     return (
-        <div className="parent" onClick={handleParentClick}>
-            <h1>Welcome Every One</h1>
-            <button onClick={handleChildClick}>+</button>
+        <div className="counter center">
+            <h1 className="counter__title">Counter App</h1>
+            <div className="card center">
+                <h2 className="card__title">Count : 0</h2>
+                <div className="card__btns">
+                    <button className="btn card__btn">+</button>
+                    <button className="btn card__btn">-</button>
+                    <button className="btn card__btn">0</button>
+                </div>
+            </div>
         </div>
     );
 }
