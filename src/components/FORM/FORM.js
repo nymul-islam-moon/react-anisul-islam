@@ -21,7 +21,12 @@ export default function FORM () {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(name, email, password);
+        let formData = {
+            name, // as the name and variable name is same no need to use extra name like as name: name.
+            email,
+            password: password
+        }
+        console.log(formData);
     }
 
     return (
