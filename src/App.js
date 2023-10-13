@@ -6,17 +6,23 @@ import React, {useState} from 'react';
 /**
  * Component Section
  */
-import Child from "./components/STATE_LIFTING/Child";
 
 export default function App() {
 
-    const data = "I am from Parent ( APP )";
-    const handleChildData = ( childData ) => {
-        console.log( "App : " + childData );
+    /**
+     * Todo component | Difference between component and function is that component name will start capital latter and always return a value.
+     * @constructor
+     */
+    const Todo = ( props ) => {
+        return <div>
+            <h1>I am ToDo</h1>
+            <h3>{ props.title }</h3>
+        </div>
     }
+
     return (
-        <div className="counter center">
-            <Child data={data} onChildData={handleChildData}/>
+        <div>
+            <Todo title="todo title"/>
         </div>
     );
 }
