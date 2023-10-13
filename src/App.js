@@ -1,11 +1,19 @@
+/**
+ * Third Party Section
+ */
 import React, {useState} from 'react';
 
-import FORM from './components/FORM/FORM'
+/**
+ * Component Section
+ */
+import Child from "./components/STATE_LIFTING/Child";
+
 export default function App() {
 
+    const data = "I am from Parent ( APP )";
     return (
         <div className="counter center">
-            <FORM />
+            <Child data={data}/>
         </div>
     );
 }
