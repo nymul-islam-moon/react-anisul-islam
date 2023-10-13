@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
-import style from './form.module.css'
+import style from './form.module.css';
 
 export default function FORM () {
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [user, setUser] = useState({ name: '', email: '', password: '' })
+    const {name, email, password}= user
+
 
     const handleNameChange = ( e ) => {
-        setName(e.target.value);
+        setUser({ name: e.target.value, email, password });
     }
 
     const handleEmailChange = ( e ) => {
-        setEmail(e.target.value);
+        setUser({ name, email: e.target.value, password });
     }
 
     const handlePasswordChange = ( e ) => {
-        setPassword(e.target.value);
+        setUser({ name, email, password: e.target.value} );
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        let formData = {
-            name, // as the name and variable name is same no need to use extra name like as name: name.
-            email,
-            password: password
-        }
-        console.log(formData);
+        console.log(user);
     }
 
     return (
