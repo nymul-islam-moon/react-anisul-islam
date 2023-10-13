@@ -66,3 +66,7 @@ body {
 .btn:disabled {
     background-color: red;
 }
+
+.form__class{
+    background-color: aqua;
+}
