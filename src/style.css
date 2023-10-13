@@ -14,3 +14,7 @@ button {
     font-size: 2rem;
     width: 80px;
 }
+
+.parent{
+    background-color: cornflowerblue;
+}
