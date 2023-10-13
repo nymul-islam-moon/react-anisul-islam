@@ -25,7 +25,7 @@ export default function App() {
                 <div className="card__btns">
                     <button className="btn card__btn" onClick={handleIncrement} disabled={ count === 5 ? true : false }>+</button>
                     <button className="btn card__btn" onClick={handleDecrement} disabled={ count === -5 ? true : false }>-</button>
-                    <button className="btn card__btn" onClick={handleSetCount}>0</button>
+                    <button className="btn card__btn" onClick={handleSetCount} disabled={ count === 0 ? true : false }>0</button>
                 </div>
             </div>
         </div>
