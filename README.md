@@ -1,13 +1,16 @@
-# TODO APP
+# Getting Started with Create React App
 
-## New Todo
-- ### insert new Todos
-## Todos
-- ### Collect All Todos
-## Todo
-- ### Show Todos
-## Home
-- ### Call The Todo and New Todo file
-## App
-- ### Main App that call Todo App
-- ### App Call the main Home.js page and
+## How to use the template?
+
+-   fork
+-   clone to your local machine
+-   npm install
+-   npm start
+
+<h1 align="center" style="color:cyan;">I am Nymul Islam </h1>
+
+## Template Includes
+
+-   react-icons
+-   Eslint
+-   Prettier
