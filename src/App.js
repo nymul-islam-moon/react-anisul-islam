@@ -1,21 +1,27 @@
 /**
  * Third Party Section
  */
-import React, {useState} from 'react';
+import React from 'react';
 
 /**
  * Component Section
  */
-import Todo from './Todo';
-// import NewTodo from './NewTodo';
+import Todo from "./Todo";
+import NewTodo from "./NewTodo";
 
-export default function App() {
 
-    return (
-        <div>
-            <h1>Hello</h1>
-            {/*<NewTodo />*/}
-            <Todo title="todo title"/>
-        </div>
-    );
-}
+const App = () => {
+
+    const handleNewTodo = (newTodo) => {
+        console.log(newTodo);
+    }
+
+     return (
+         <div>
+             <NewTodo onHandleNewTodo={handleNewTodo}/>
+               <Todo title={"I am ToDo"}/>
+         </div>
+     );
+};
+
+export default App;

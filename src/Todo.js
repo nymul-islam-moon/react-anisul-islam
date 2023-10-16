@@ -6,7 +6,6 @@ import React from "react";
  */
 const Todo = ( props ) => {
     return <div>
-        <h1>I am todo</h1>
         <h3>{ props.title }</h3>
     </div>
 }
