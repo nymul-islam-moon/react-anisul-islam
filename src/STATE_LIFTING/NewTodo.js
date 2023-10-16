@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const NewTodo = () => {
+const NewTodo = ( props ) => {
 
     const [todo, setTodo] = useState("")
 
@@ -10,7 +10,7 @@ const NewTodo = () => {
 
     const handleSubmit = ( event ) => {
         event.preventDefault();
-        console.log( todo );
+        props.onTodo(todo);
     }
 
     return (
