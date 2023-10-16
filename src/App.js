@@ -2,6 +2,7 @@
  * Third Party Section
  */
 import React from 'react';
+import Home from "./STATE_LIFTING/Home";
 
 /**
  * Component Section
@@ -9,7 +10,9 @@ import React from 'react';
 
 const App = () => {
      return (
-         <div>I am APP</div>
+         <div>
+              <Home />
+         </div>
      );
 };
 
