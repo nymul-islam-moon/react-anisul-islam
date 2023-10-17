@@ -21,7 +21,9 @@ const Home = () => {
     const [todos, setTodos] = useState([]);
 
     const handleAddTodo = ( todo ) => {
-        console.log( todo );
+        setTodos(( prevTodos ) => {
+            return [ ...prevTodos, { todo } ]
+        })
     }
 
     return <div className={Style.container}>
