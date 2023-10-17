@@ -18,6 +18,9 @@ const Todo = ( props ) => {
                     <button className={Style.btn} onClick={ () => { handleClick( id ) } } >
                         <i className="fa fa-trash fa-2x"></i>
                     </button>
+                    <button className={Style.btn} onClick={ () => { handleClick( id ) } } >
+                        <i className="fa fa-pencil fa-2x"></i>
+                    </button>
                 </div>
             </div>
         </article>
