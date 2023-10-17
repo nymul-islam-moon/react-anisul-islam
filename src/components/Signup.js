@@ -1,12 +1,28 @@
 import React, { useState } from 'react';
+import { useFormik } from "formik";
 
 // name , email, phone, address, password
 const Signup = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [address, setAddress] = useState("");
-    const [password, setPassword] = useState("");
+
+    const formik = useFormik({
+        initialValues : {
+            name: '',
+            phone: '',
+            email: '',
+            address: '',
+            password: ''
+        }
+    })
+
+    /**
+     * The replacement of these lines are in the formik const into the initialValues part
+     * @param e
+     */
+    // const [name, setName] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [phone, setPhone] = useState("");
+    // const [address, setAddress] = useState("");
+    // const [password, setPassword] = useState("");
 
     const handleNameChange = (e) => {
         setName( e.target.value );
