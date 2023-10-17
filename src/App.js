@@ -5,7 +5,7 @@ import React from 'react';
 import Home from "./STATE_LIFTING/Home";
 
 /**
- * Component Section
+ * Component Section | main branch
  */
 
 const App = () => {
