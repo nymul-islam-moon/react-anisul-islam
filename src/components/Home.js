@@ -28,10 +28,19 @@ const Home = () => {
         })
     }
 
+    const handleRemoveTodo = ( id ) => {
+
+        setTodos( ( prevTodos ) => {
+            const filteredTodos = prevTodos.filter( (todo) => todo.id !== id);
+            return filteredTodos;
+        } );
+
+    }
+
     return <div className={Style.container}>
         <h1 style={{color : "white"}}>TODO APP</h1>
         <NewTodo onAddTodo={ handleAddTodo }/>
-        <Todos todos={ todos }/>
+        <Todos todos={ todos } onRemoveTodo={ handleRemoveTodo } />
     </div>
 }
 
