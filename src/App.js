@@ -6,11 +6,12 @@ import React from 'react';
 /**
  * Component Section | main branch
  */
+import Signup from './components/Signup'
 
 const App = () => {
      return (
          <div>
-             <h1>Welcome</h1>
+             <Signup />
          </div>
      );
 };
