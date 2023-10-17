@@ -1,18 +1,16 @@
 /**
  * Third Party Section
  */
-import React from 'react';
+import React, { useState } from 'react';
 
 /**
  * Component Section | main branch
  */
+import FAQS from "./FAQ/FAQS";
 
 const App = () => {
-     return (
-         <div>
-             <h1>Welcome</h1>
-         </div>
-     );
+
+    return <FAQS/>;
 };
 
 export default App;
