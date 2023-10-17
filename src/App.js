@@ -2,7 +2,6 @@
  * Third Party Section
  */
 import React from 'react';
-import Home from "./STATE_LIFTING/Home";
 
 /**
  * Component Section | main branch
@@ -11,7 +10,7 @@ import Home from "./STATE_LIFTING/Home";
 const App = () => {
      return (
          <div>
-              <Home />
+             <h1>Welcome</h1>
          </div>
      );
 };
