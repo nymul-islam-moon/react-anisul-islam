@@ -17,7 +17,7 @@ const NewTodo = () => {
 
     const handleSubmit = ( event ) => {
         event.preventDefault();
-        console.log(todo);
+        setTodo( {title: "", desc: ""} );
     }
 
     return (
