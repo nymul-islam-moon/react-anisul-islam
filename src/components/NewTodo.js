@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import Style from './newtodo.module.css';
+import Style from './newTodo.module.css';
 
 const NewTodo = () => {
 
