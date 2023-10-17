@@ -6,11 +6,12 @@ import React from 'react';
 /**
  * Component Section | main branch
  */
+import Toggle from './Toggle/Toggle'
 
 const App = () => {
      return (
          <div>
-             <h1>Welcome</h1>
+             <Toggle />
          </div>
      );
 };
