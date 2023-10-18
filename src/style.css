@@ -19,6 +19,11 @@ body {
     background-color: #4c4c4c;
 }
 
+body h1 {
+    color: white;
+    font-family: "Apple Braille";
+}
+
 .center {
     display: flex;
     flex-direction: column;
