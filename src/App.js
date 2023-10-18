@@ -6,11 +6,12 @@ import React from 'react';
 /**
  * Component Section | main branch
  */
+import UseEffectExample from "./HOOKS/useEffect/UseEffectExample";
 
 const App = () => {
      return (
          <div>
-             <h1>Welcome</h1>
+             <h1><UseEffectExample /></h1>
          </div>
      );
 };
