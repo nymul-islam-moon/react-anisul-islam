@@ -20,7 +20,7 @@ const useEffectExample = () => {
      */
     useEffect(() => {
         console.log('UseEffect');
-    });
+    }, []);
 
     return (
         <div>
