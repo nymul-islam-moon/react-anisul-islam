@@ -4,18 +4,25 @@ const DataFetch = () => {
 
     const [todos, setTodos] = useState( null );
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect( () => {
-        setTimeout( () => {
-            fetch("https://jsonplaceholder.typicode.com/todos")
-                .then((res) => {
-                    return res.json()
-                })
-                .then( (data) => {
-                    setTodos(data);
-                    setIsLoading(false);
-                });
-        }, 2000 );
+        fetch("https://jsonplaceholder.typicode.com/todos")
+            .then((res) => {
+                if ( !res.ok ) {
+                    throw Error( 'Fetching is not successful' );
+                }
+                return res.json();
+            })
+            .then( (data) => {
+                setTodos(data);
+                setIsLoading(false);
+                setError(null);
+            })
+            .catch((error)=>{
+                setError(error.message)
+                setIsLoading(false);
+            });
     }, []);
 
     const todosElement = todos && todos.map( (todo) => {
@@ -28,6 +35,7 @@ const DataFetch = () => {
         <div>
             <h1>Todos</h1>
             { isLoading && loadingMesage }
+            {error && <p style={{ color: "red" }}>{ error }</p>}
             { todosElement }
         </div>
     )
