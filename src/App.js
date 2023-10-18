@@ -12,7 +12,7 @@ import DataFetch from "./HOOKS/useEffect/DataFetch";
 const App = () => {
      return (
          <div>
-             <h1><DataFetch /></h1>
+             <DataFetch />
          </div>
      );
 };

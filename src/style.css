@@ -19,9 +19,13 @@ body {
     background-color: #4c4c4c;
 }
 
-body h1 {
+body h1, p {
     color: white;
     font-family: "Apple Braille";
+}
+
+body p {
+    font-size: large;
 }
 
 .center {
