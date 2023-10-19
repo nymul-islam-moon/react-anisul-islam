@@ -4,7 +4,10 @@ const App = () => {
     
 
     return (
-        <div>Hello</div>
+        <>
+            <h2>I am H2</h2>
+            <p>I am paragraph</p>
+        </>
     );
 };
 
