@@ -79,3 +79,15 @@ body p {
 .form__class{
     background-color: aqua;
 }
+
+.App {
+    text-align: center;
+}
+
+.valid {
+    background-color: green;
+}
+
+.invalid {
+    background-color: red;
+}
