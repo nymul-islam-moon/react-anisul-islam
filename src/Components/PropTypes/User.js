@@ -17,10 +17,23 @@ const User = ( props ) => {
     );
 };
 
+/**
+ * User Name and User Id type checks
+ * @type {{userName: Requireable<string>, userId: Requireable<number>}}
+ */
 User.propTypes = {
     // key-value
     userName: PropTypes.string,
     userId: PropTypes.number,
+}
+
+/**
+ * Set Default values
+ * @type {{userName: string, userId: number}}
+ */
+User.defaultProps = {
+    userName: "Default name",
+    userId: 1,
 }
 
 export default User;
