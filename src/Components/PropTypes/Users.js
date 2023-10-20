@@ -9,12 +9,14 @@ import User from "./User";
 
 const Users = () => {
 
-    const [userName, setUserName] = useState('Nymul Islam');
-    const [userId, setUserId] = useState();
+    const [user, setUser] = useState({
+        id: 101,
+        name: 'Nymul Islam',
+    });
 
     return (
         <>
-            <User userName={userName} userId={userId}/>
+            <User user={user} />
         </>
     );
 };
