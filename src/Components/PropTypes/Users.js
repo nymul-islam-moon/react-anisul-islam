@@ -1,7 +1,21 @@
-import React from "react";
+/**
+ * Import Third Party
+ */
+import React, {useState} from "react";
+/**
+ * Import Custom
+ */
+import User from "./User";
 
 const Users = () => {
-    return <div></div>;
+
+    const [userName, setUserName] = useState('Nymul Islam');
+
+    return (
+        <>
+            <User userName={userName}/>
+        </>
+    );
 };
 
 export default Users;
