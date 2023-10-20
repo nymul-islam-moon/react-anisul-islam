@@ -1,6 +1,12 @@
 import React from "react";
 
 const UserForm = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('submitted');
+    }
+
     return (
         <form onSubmit={handleSubmit}>
             <div>
