@@ -5,12 +5,11 @@ import React from 'react';
 /**
  * Import Custom
  */
-import LifeCycle from "./Components/LifeCycle/LifeCycle";
 
 const App = () => {
     return (
         <div>
-            <LifeCycle />
+            <h1>Welcome</h1>
         </div>
     );
 };
