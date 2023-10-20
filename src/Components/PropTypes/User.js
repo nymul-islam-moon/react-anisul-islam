@@ -1,4 +1,13 @@
+/**
+ * Import Third Party
+ */
 import React from "react";
+import PropTypes from "prop-types";
+/**
+ * Import Custom
+ */
+
+console.log(PropTypes);
 
 const User = ( props ) => {
     return (
@@ -8,5 +17,9 @@ const User = ( props ) => {
         </div>
     );
 };
+
+User.propTypes = {
+
+}
 
 export default User;
