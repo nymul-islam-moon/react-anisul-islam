@@ -5,12 +5,12 @@ import React from 'react';
 /**
  * Import Custom
  */
-import Users from "./Components/PropTypes/Users";
+import LifeCycle from "./Components/LifeCycle/LifeCycle";
 
 const App = () => {
     return (
         <div>
-            <h2><Users /></h2>
+            <LifeCycle />
         </div>
     );
 };
