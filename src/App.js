@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const App = () => {
-    
-
     return (
-        <>
-            <h2>I am H2</h2>
-            <p>I am paragraph</p>
-        </>
+        <div>
+            <h2>Hello</h2>
+        </div>
     );
 };
 
