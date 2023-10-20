@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
  * Import Custom
  */
 
-console.log(PropTypes);
 
 const User = ( props ) => {
     return (
@@ -19,7 +18,9 @@ const User = ( props ) => {
 };
 
 User.propTypes = {
-
+    // key-value
+    userName: PropTypes.string,
+    userId: PropTypes.number,
 }
 
 export default User;
