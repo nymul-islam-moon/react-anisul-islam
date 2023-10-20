@@ -9,10 +9,7 @@ import User from "./User";
 
 const Users = () => {
 
-    const [user, setUser] = useState({
-        id: 101,
-        name: 'Nymul Islam',
-    });
+    const [user, setUser] = useState('moon');
 
     return (
         <>

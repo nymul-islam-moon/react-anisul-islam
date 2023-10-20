@@ -23,8 +23,7 @@ const User = ( props ) => {
  */
 User.propTypes = {
     // key-value
-    userName: PropTypes.string,
-    userId: PropTypes.number,
+    user: PropTypes.object.isRequired,
 }
 
 /**
