@@ -2,6 +2,7 @@
  * Import Third Party
  */
 import React from 'react';
+import UserForm from "./Components/LifeCycle/RefExample/UserForm";
 /**
  * Import Custom
  */
@@ -9,7 +10,7 @@ import React from 'react';
 const App = () => {
     return (
         <div>
-            <h1>Welcome</h1>
+            <UserForm />
         </div>
     );
 };
