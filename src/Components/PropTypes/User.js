@@ -9,10 +9,10 @@ import PropTypes from "prop-types";
 
 
 const User = ( props ) => {
-    console.log(props.user);
     return (
         <div>
-            Welcome
+            <h3>{props.user.id}</h3>
+            <h3>{props.user.name}</h3>
         </div>
     );
 };
@@ -23,7 +23,10 @@ const User = ( props ) => {
  */
 User.propTypes = {
     // key-value
-    user: PropTypes.object.isRequired,
+    user: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+    }),
 }
 
 /**
