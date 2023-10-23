@@ -10,7 +10,7 @@ import UseReducer from "./HOOKS/useReducer";
 const App = () => {
     return (
         <div>
-            <UseReducer />
+            Welcome
         </div>
     );
 };
