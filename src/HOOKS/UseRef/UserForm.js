@@ -9,7 +9,7 @@ const UserForm = () => {
         event.preventDefault();
         const userName = userNameRef.current.value;
         const password = passwordRef.current.value;
-        console.log(userName);
+        console.log(userName, password);
     }
 
     return (

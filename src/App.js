@@ -2,8 +2,7 @@
  * Import Third Party
  */
 import React from 'react';
-import UserForm from "./HOOKS/UseRef/UserForm";
-
+import UseReducer from "./HOOKS/useReducer";
 /**
  * Import Custom
  */
@@ -11,7 +10,7 @@ import UserForm from "./HOOKS/UseRef/UserForm";
 const App = () => {
     return (
         <div>
-            <UserForm />
+            <UseReducer />
         </div>
     );
 };
