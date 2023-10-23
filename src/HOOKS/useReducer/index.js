@@ -1,34 +1,36 @@
-import React, {useState} from 'react'
-
-const booksData = [
-    { id: 1, name: "Pather Panchal" },
-    { id: 2, name: "Padma Nadir Majhi" },
-    { id: 3, name: "Srikanta" }
-];
+import React, { useState, useReducer } from 'react'
+import booksData from './booksData.json';
 
 const Modal = ({modalText}) => {
     return <p>{modalText}</p>;
 }
-
+const reducer = ( state, action ) => {
+    //action.type, action.payload
+    if ( action.type === "ADD" ) {
+        const allBooks = [ ...state.books, action.payload ];
+        return {
+            ...state,
+            books: allBooks,
+            isModalOpen: true,
+            modalText: "Book is added",
+        };
+    }
+    // if ( action.type === "REMOVE" ) {}
+    return state;
+};
 const UseReducer = () => {
-
-    const [books, setBooks] = useState( booksData );
+    const [ bookState, dispatch ] = useReducer( reducer, {
+        books: booksData,
+        isModalOpen: false,
+        modalText: "",
+    });
     const [bookName, setBookName] = useState("");
-    const [modalText, setModalText] = useState("");
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     const handleSubmit = ( e ) => {
         e.preventDefault();
-        setBooks((prevState) => {
-            const newBook = {id: new Date().getTime().toString(), name: bookName}
-            return [...prevState, newBook];
-        });
-        setIsModalOpen(true);
-        setModalText("Book is added");
-        // setIsModalOpen(false);
-
-    }
-
+        const newBook = {id: new Date().getTime().toString(), name: bookName};
+        dispatch({type: "ADD", payload: newBook})
+        setBookName("");
+    };
     return (
         <div>
             <h3>Books List</h3>
@@ -36,15 +38,12 @@ const UseReducer = () => {
                 <input type="text" value={bookName} onChange={(e) => {setBookName(e.target.value);}} />
                 <button type="submit">Add Book</button>
             </form>
-
-            {isModalOpen && <Modal modalText={modalText} />}
-
-            {books.map((book) => {
+            {bookState.isModalOpen && <Modal modalText={bookState.modalText} />}
+            {bookState.books.map((book) => {
                 const {id, name} = book;
                 return <li key={id}>{name}</li>
             })}
         </div>
     )
 }
-
 export default UseReducer;
