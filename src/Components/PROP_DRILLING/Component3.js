@@ -1,9 +1,9 @@
 import React from "react";
 import Component4 from "./Component4";
 
-const Component3 = ({user}) => {
+const Component3 = () => {
     return (
-        <Component4 user={user} />
+        <Component4 />
     )
 }
 

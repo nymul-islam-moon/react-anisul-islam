@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
+import {UserContext} from "./UserContext";
 
-const Component4 = ({user}) => {
-    const {id, name} = user;
+const Component4 = () => {
+    const {id, name} = useContext(UserContext);
     return (
         <div>
             <h4>ID   : { id }</h4>
