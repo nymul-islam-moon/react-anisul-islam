@@ -1,24 +1,13 @@
 import React, { useState, useReducer } from 'react'
 import booksData from './booksData.json';
+import { reducer } from "./Reducer";
 
-const Modal = ({modalText}) => {
-    return <p>{modalText}</p>;
-}
-const reducer = ( state, action ) => {
-    //action.type, action.payload
-    if ( action.type === "ADD" ) {
-        const allBooks = [ ...state.books, action.payload ];
-        return {
-            ...state,
-            books: allBooks,
-            isModalOpen: true,
-            modalText: "Book is added",
-        };
-    }
-    // if ( action.type === "REMOVE" ) {}
-    return state;
-};
 const UseReducer = () => {
+
+    const Modal = ({modalText}) => {
+        return <p>{modalText}</p>;
+    }
+
     const [ bookState, dispatch ] = useReducer( reducer, {
         books: booksData,
         isModalOpen: false,
@@ -31,6 +20,11 @@ const UseReducer = () => {
         dispatch({type: "ADD", payload: newBook})
         setBookName("");
     };
+
+    const removeBook = ( id ) => {
+        dispatch({ type:"REMOVE", payload: id });
+    }
+
     return (
         <div>
             <h3>Books List</h3>
@@ -41,7 +35,13 @@ const UseReducer = () => {
             {bookState.isModalOpen && <Modal modalText={bookState.modalText} />}
             {bookState.books.map((book) => {
                 const {id, name} = book;
-                return <li key={id}>{name}</li>
+                return (
+                    <li key={id}>
+                        {name} <button onClick={() => {
+                            removeBook(id)
+                    }}>Remove</button>
+                    </li>
+                )
             })}
         </div>
     )
