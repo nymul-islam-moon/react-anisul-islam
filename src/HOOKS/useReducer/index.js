@@ -8,16 +8,17 @@ const UseReducer = () => {
         return <p>{modalText}</p>;
     }
 
-    const [ bookState, dispatch ] = useReducer( reducer, {
+    const initialState = {
         books: booksData,
         isModalOpen: false,
         modalText: "",
-    });
+    };
+    const [ bookState, dispatch ] = useReducer( reducer, initialState );
     const [bookName, setBookName] = useState("");
     const handleSubmit = ( e ) => {
         e.preventDefault();
         const newBook = {id: new Date().getTime().toString(), name: bookName};
-        dispatch({type: "ADD", payload: newBook})
+        dispatch({type: "ADD", payload: newBook});
         setBookName("");
     };
 
