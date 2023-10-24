@@ -2,19 +2,23 @@
  * Import Third Party
  */
 import React from 'react';
-import Users from "./Components/Users";
 import style from './style.css';
-import NewUser from "./Components/NewUser";
-import UsersProvider from "./Context/UsersContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import Common from "./pages/Common";
 
 const App = () => {
     return (
-        <UsersProvider>
-            <div>
-                <NewUser />
-                <Users />
-            </div>
-        </UsersProvider>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/home" element={ <Home /> } />
+                <Route path="/blog" element={ <Blogs /> } />
+                <Route path="/contact" element={ <Contact /> } />
+                <Route path="/*" element={ <Common /> } />
+            </Routes>
+        </BrowserRouter>
     );
 };
 

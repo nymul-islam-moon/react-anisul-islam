@@ -1,3 +1,7 @@
+*{
+    background-color: lavender;
+}
+
 .users {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -12,4 +16,10 @@
 .btn-dlt{
     color: blanchedalmond;
     background: red;
+}
+
+.h1 {
+    align-items: center;
+    accent-color: auto;
+    align-content: center;
 }
