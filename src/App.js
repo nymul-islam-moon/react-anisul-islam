@@ -4,6 +4,7 @@
 import React, {useState} from 'react';
 import Users from "./Components/Users";
 import style from './style.css';
+import NewUser from "./Components/NewUser";
 /**
  * Import Custom
  */
@@ -19,8 +20,13 @@ const App = () => {
         setUsers(filteredUsers);
     }
 
+    const handleAddNewUser = ( newUser ) => {
+        setUsers(prevUsers => [ ...prevUsers, newUser ]);
+    };
+
     return (
         <div>
+            <NewUser handleAddNewUser={handleAddNewUser}/>
             <Users users={users} handleDeleteUser={handleDeleteUser} />
         </div>
     );
@@ -29,3 +35,15 @@ const App = () => {
 export default App;
 
 // CRD -> CREATE -> READ -> DELETE USER
+// useContext()
+// createContext()
+
+// App -> Users -> User
+// App -> NewUser
+
+/**
+ * 1. Create Context
+ * 2. provide The Context
+ * 3. Use The Context
+ *
+ */
