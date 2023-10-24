@@ -16,14 +16,10 @@ const App = () => {
         {id: 2, username: 'Alex'},
     ]);
 
-    const handleAddNewUser = ( newUser ) => {
-        setUsers(prevUsers => [ ...prevUsers, newUser ]);
-    };
-
     return (
         <UsersContext.Provider value={{users,setUsers}}>
             <div>
-                <NewUser handleAddNewUser={handleAddNewUser} />
+                <NewUser />
                 <Users />
             </div>
         </UsersContext.Provider>
