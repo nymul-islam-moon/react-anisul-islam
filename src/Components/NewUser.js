@@ -3,7 +3,7 @@ import {useUsersContext} from "../hooks/useUsersContext";
 
 const NewUser = () => {
     const [ username, setUsername ] = useState("");
-    const { users, setUsers } = useUsersContext();
+    const { state, dispatch } = useUsersContext();
     const handleUsernameChange = ( event ) => {
         setUsername(event.target.value);
     }
@@ -11,7 +11,7 @@ const NewUser = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newUser = {id: new Date().getTime().toString(), username: username};
-        setUsers(prevUsers => [ ...prevUsers, newUser ]);
+        dispatch({type:'ADD_USER', payload:newUser})
         setUsername("");
     }
 

@@ -1,14 +1,13 @@
-import React, {createContext, useState} from "react";
+import React, { createContext, useReducer } from "react";
+import {initialState, reducer} from "../reducer/usersReducer";
 
 export const UsersContext = createContext({});
 
 const UsersProvider = ({children}) => {
-    const [  users, setUsers ] = useState([
-        {id: 1, username: 'Anisul'},
-        {id: 2, username: 'Alex'},
-    ]);
+    const [ state, dispatch ] = useReducer( reducer, initialState );
 
-    return <UsersContext.Provider value={{users,setUsers}}>
+
+    return <UsersContext.Provider value={{ state, dispatch }}>
         { children }
     </UsersContext.Provider>
 }

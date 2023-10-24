@@ -3,11 +3,10 @@ import {useUsersContext} from "../hooks/useUsersContext";
 
 const User = ({ user }) => {
     const {id, username} = user;
-    const { users, setUsers } = useUsersContext();
+    const { dispatch } = useUsersContext();
 
     const handleDelete = ( id ) => {
-        const filteredUsers = users.filter( (user) => user.id !== id );
-        setUsers(filteredUsers);
+        dispatch({type: 'DELETE_USER', payload: id})
     }
 
     return (
