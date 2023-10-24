@@ -10,7 +10,8 @@ nav {
     align-items: center;
 }
 
-.nav-link {
+.nav-link,
+.blog-link {
     background-color: aliceblue;
     text-decoration: none;
     margin: 1rem;
@@ -22,4 +23,30 @@ nav {
 
 nav .active {
     color: black;
+}
+
+section {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+article {
+    background-color: aliceblue;
+    padding: 1rem;
+}
+
+article h3, p {
+    background-color: aliceblue;
+}
+
+@media screen and (min-width: 600px) {
+    section {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        grid-template-columns: auto auto auto;
+    }
 }
