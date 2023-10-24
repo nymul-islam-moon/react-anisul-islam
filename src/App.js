@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 import Users from "./Components/Users";
 import style from './style.css';
 import NewUser from "./Components/NewUser";
+import {UsersContext} from "./Context/UsersContext";
 /**
  * Import Custom
  */
@@ -25,10 +26,12 @@ const App = () => {
     };
 
     return (
-        <div>
-            <NewUser handleAddNewUser={handleAddNewUser}/>
-            <Users users={users} handleDeleteUser={handleDeleteUser} />
-        </div>
+        <UsersContext.Provider value={{users,setUsers}}>
+            <div>
+                <NewUser handleAddNewUser={handleAddNewUser} />
+                <Users handleDeleteUser={handleDeleteUser} />
+            </div>
+        </UsersContext.Provider>
     );
 };
 
@@ -45,5 +48,4 @@ export default App;
  * 1. Create Context
  * 2. provide The Context
  * 3. Use The Context
- *
  */
