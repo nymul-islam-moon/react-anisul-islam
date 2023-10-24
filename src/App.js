@@ -16,11 +16,6 @@ const App = () => {
         {id: 2, username: 'Alex'},
     ]);
 
-    const handleDeleteUser = ( id ) => {
-        const filteredUsers = users.filter( user => user.id !== id );
-        setUsers(filteredUsers);
-    }
-
     const handleAddNewUser = ( newUser ) => {
         setUsers(prevUsers => [ ...prevUsers, newUser ]);
     };
@@ -29,7 +24,7 @@ const App = () => {
         <UsersContext.Provider value={{users,setUsers}}>
             <div>
                 <NewUser handleAddNewUser={handleAddNewUser} />
-                <Users handleDeleteUser={handleDeleteUser} />
+                <Users />
             </div>
         </UsersContext.Provider>
     );
