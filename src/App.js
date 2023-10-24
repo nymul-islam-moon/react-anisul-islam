@@ -1,7 +1,7 @@
 /**
  * Import Third Party
  */
-import React, {useState} from 'react';
+import React from 'react';
 import Users from "./Components/Users";
 import style from './style.css';
 import NewUser from "./Components/NewUser";
