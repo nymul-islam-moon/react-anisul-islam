@@ -2,24 +2,24 @@
     background-color: lavender;
 }
 
-.users {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-.user {
-    background-color: antiquewhite;
-    padding: 0.5rem;
-}
-
-.btn-dlt{
-    color: blanchedalmond;
-    background: red;
-}
-
-.h1 {
+nav {
+    height: 10vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    accent-color: auto;
-    align-content: center;
+}
+
+.nav-link {
+    background-color: aliceblue;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.nav-link:hover {
+    color: chartreuse;
+}
+
+nav .active {
+    color: black;
 }
