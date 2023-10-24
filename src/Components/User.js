@@ -1,9 +1,9 @@
-import React, {useContext} from "react";
-import {UsersContext} from "../Context/UsersContext";
+import React from "react";
+import {useUsersContext} from "../hooks/useUsersContext";
 
 const User = ({ user }) => {
     const {id, username} = user;
-    const { users, setUsers } = useContext( UsersContext );
+    const { users, setUsers } = useUsersContext();
 
     const handleDelete = ( id ) => {
         const filteredUsers = users.filter( (user) => user.id !== id );
