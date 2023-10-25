@@ -3,12 +3,18 @@
  */
 import React from 'react';
 import style from './style.css';
-import Index from "./routes/Index";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 
 const App = () => {
     return (
-        <Index />
+        <>
+            App uses Routes
+            <Home />
+            <About />
+        </>
+
     );
 };
 
