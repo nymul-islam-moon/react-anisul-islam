@@ -21,7 +21,7 @@ const App = () => {
                 <Route path="/blog" element={ <Blogs /> } />
                 <Route path="/blog/:title" element={ <Blog /> } />
                 <Route path="/contact" element={ <Contact /> } />
-                <Route path="/user/:userId" element={ <User /> } />
+                <Route path="/user" element={ <User /> } />
                 <Route path="*" element={ <Common /> } />
             </Routes>
         </BrowserRouter>
