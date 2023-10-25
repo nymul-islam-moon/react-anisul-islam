@@ -9,6 +9,7 @@ import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Common from "./pages/Common";
+import User from "./pages/User";
 import Navbar from "./Components/Navbar";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/blog" element={ <Blogs /> } />
                 <Route path="/blog/:title" element={ <Blog /> } />
                 <Route path="/contact" element={ <Contact /> } />
+                <Route path="/user/:userId" element={ <User /> } />
                 <Route path="*" element={ <Common /> } />
             </Routes>
         </BrowserRouter>
