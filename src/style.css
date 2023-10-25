@@ -50,3 +50,32 @@ article h3, p {
         grid-template-columns: auto auto auto;
     }
 }
+
+/** test **/
+/*.cart {*/
+/*    background: rgba(255, 255, 255, 0.3); !* Set the background color with some transparency *!*/
+/*    border-radius: 10px; !* Rounded corners for a glassy look *!*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); !* Add a subtle shadow for depth *!*/
+/*    padding: 20px;*/
+/*    width: 300px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.cart h2 {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.cart ul {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.cart li {*/
+/*    padding: 10px;*/
+/*    border-bottom: 1px solid rgba(0, 0, 0, 0.2); !* Add a separator between items *!*/
+/*    transition: background 0.3s; !* Smooth background color transition on hover *!*/
+/*}*/
+
+/*.cart li:hover {*/
+/*    background: rgba(255, 255, 255, 0.6); !* Lighten the background on hover *!*/
+/*}*/
