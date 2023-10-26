@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const FetchData = () => {
+const FetchData = (url) => {
 
-    const data = [
-        {
-            id: 1,
-            name: 'Nymul Islam',
-            phone: '01786283389',
-            email: 'towkir1997islam@gmail.com',
-            address: 'Mohammadpur, Dhaka',
-        },
-        {
-            id: 2,
-            name: 'Towkir Islam',
-            phone: '01456283389',
-            email: 'nymul.islam@gmail.com',
-            address: 'Dhanmondi, Dhaka',
+    const [ isLoading, setIsLoading ] = useState(true);
+    const [ error, setError ] = useState( null );
+    const [ data, setData ] = useState( [] );
+    // console.log(props);
+    const fetchData = async ( url ) => {
+        setIsLoading(true);
+
+        try {
+            const response = await fetch( url );
+            const data = await response.json();
+
+            setData( data );
+            setIsLoading( false );
+            setError( null );
+            console.log(data);
+        } catch ( e ) {
+            setIsLoading(false);
+            setError( e );
         }
-    ];
+
+    }
+
+    useEffect(() => {
+        fetchData( url );
+    }, [])
 
     return data;
 };
