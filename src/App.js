@@ -1,13 +1,16 @@
 /**
  * Import Third Party
  */
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import Home from "./components/Home";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import style from './style.css'
 
 const App = () => {
     return (
-        <div>
-            <h3>APP</h3>
-        </div>
+        <>
+            <Home />
+        </>
     );
 };
 
