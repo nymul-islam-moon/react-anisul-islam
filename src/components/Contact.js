@@ -5,7 +5,7 @@ const Contact = ({contact}) => {
     const {name, email, phone, address} = contact;
 
     return (
-        <article>
+        <article className="contact">
             <div>
                 <h3>{ name }</h3>
                 <address>
@@ -15,7 +15,8 @@ const Contact = ({contact}) => {
                 </address>
             </div>
             <div>
-                <button><i className="fa fa-trash fa-2x"></i></button>
+                <button className="btn-delete"><i className="fa fa-trash fa-2x"></i></button>
+                <button className="btn-edit"><i className="fa fa-pencil fa-2x"></i></button>
             </div>
         </article>
     );

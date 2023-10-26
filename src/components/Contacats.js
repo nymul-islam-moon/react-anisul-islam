@@ -5,7 +5,7 @@ import Contact from "./Contact";
 const Contacts = ( {contacts} ) => {
 
     return (
-        <section>
+        <section className="contacts">
             {
                 contacts.map((contact) => <Contact key={contact.id} contact={contact}/>)
             }

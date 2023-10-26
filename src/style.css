@@ -1,47 +1,99 @@
-*{
-    background-color: lavender;
-}
-
-nav {
-    height: 10vh;
-    background-color: aliceblue;
+.container{
+    flex-direction: column;
+    background-color: #444;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-link,
-.blog-link {
-    background-color: aliceblue;
-    text-decoration: none;
-    margin: 1rem;
+.contacts {
+    width: 50%;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    overflow: scroll;
+    height: 60vh;
 }
 
-.error-message {
-    color: crimson;
+.contact {
+    background-color: #222;
+    margin: 0.5rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
 }
 
-.nav-link:hover {
-    color: chartreuse;
+.contact:hover {
+    background-color: #111;
 }
 
-nav .active {
-    color: gray;
-    animation: backwards;
-    border-color: black;
+.todo address {
+    opacity: 0.6;
 }
 
-section {
-    display: grid;
-    grid-gap: 1rem;
+.btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-delete {
+    color: red;
 }
 
-article {
-    background-color: aliceblue;
-    padding: 1rem;
+.btn-edit {
+    color: cornflowerblue;
 }
 
-.user-card {
-    margin-left: 1rem;
-    margin-top: 1rem;
+/**
+    Create Form Style
+ */
+
+.form{
+    width: 50%;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-field {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.form-field label {
+    flex-basis: 20%;
+}
+
+.form-field input {
+    flex-basis: 80%;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.2rem;
+}
+.form-field textarea {
+    flex-basis: 80%;
+    resize: none;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.2rem;
+}
+
+.form button {
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.form button:hover {
+    background-color: orange;
+    color: white;
 }
