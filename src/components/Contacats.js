@@ -3,7 +3,6 @@ import Contact from "./Contact";
 
 
 const Contacts = ( {contacts} ) => {
-
     return (
         <section className="contacts">
             {

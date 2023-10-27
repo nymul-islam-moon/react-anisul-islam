@@ -1,19 +1,20 @@
 import React from "react";
 
 const Contact = ({contact}) => {
-
-    const {name, email, phone, address} = contact;
+    const {name, email, phone, address, title} = contact;
 
     const handleEdit = () => {
         console.log('edit clicked');
     }
+
+
 
     return (
         <article className="contact">
             <div>
                 <h3 className="title-name">{ name }</h3>
                 <address>
-                    Email : { email } <br/>
+                    {/*Email : { email } <br/>*/}
                     Phone : { phone } <br/>
                     Address : { address } <br/>
                 </address>
