@@ -3,12 +3,9 @@ import Contacts from "./Contacats";
 import Create from "./Create";
 import FetchData from "./FetchData";
 
-
-const url = 'http://localhost:8888/webapick/wp-json/academy/v1/contacts';
-
 const Home = () => {
 
-    const contacts = FetchData( url );
+    const contacts = FetchData();
 
     return (
         <div className="container">

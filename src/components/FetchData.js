@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const FetchData = (url) => {
+const FetchData = () => {
+
+    const url = 'http://localhost:8888/webapick/wp-json/wp/v2/posts';
+
 
     const [ isLoading, setIsLoading ] = useState(true);
     const [ error, setError ] = useState( null );
@@ -20,6 +23,7 @@ const FetchData = (url) => {
         } catch ( e ) {
             setIsLoading(false);
             setError( e );
+            console.log('Error is : ' + error);
         }
 
     }
